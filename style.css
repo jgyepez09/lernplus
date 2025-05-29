@@ -1,0 +1,9 @@
+.img-cover {
+    height: 500px; 
+    object-fit: cover;
+    object-position: top; 
+  }
+.img-rezise{
+    max-width: 400px;
+    height: auto;
+}
