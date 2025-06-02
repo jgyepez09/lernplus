@@ -8,251 +8,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <style>
-        .img-rezise{
-        max-width: 400px;
-        height: auto;
-        }
-
-        :root {
-            --primary-color: #4A90E2; /* Sanftes Blau */
-            --secondary-color: #7ED321; /* Frisches Grün */
-            --wood-color: #D2B48C; /* Heller Holzton */
-            --light-pastel: #F7F9FC; /* Sehr heller Pastellblau */
-            --pastel-mint: #F0F8F0; /* Heller Pastellmint */
-            --pastel-peach: #FFF8F0; /* Heller Pastellpfirsich */
-            --dark-color: #2C3E50; /* Dunkler Text */
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--dark-color);
-            background-color: var(--light-pastel);
-        }
-        
-        .navbar {
-            background: linear-gradient(135deg, var(--wood-color) 0%, #A0522D 100%);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            color: white !important;
-        }
-        .navbar-country {
-            font-weight: 700;
-            color: #343a40;
-        }
-        .nav-link {
-            color: var(--dark-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-        
-        .btn-primary:hover {
-            background-color: #2980b9;
-            border-color: #2980b9;
-        }
-        
-        .btn-secondary {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-        
-        .btn-secondary:hover {
-            background-color: #6BC91A;
-            border-color: #6BC91A;
-        }
-        
-        /* News/Sommerkurse Bereich */
-        .news-section {
-            padding: 60px 0;
-            background: linear-gradient(135deg, var(--pastel-mint) 0%, var(--pastel-peach) 100%);
-        }
-        
-        .news-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-        }
-        
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-        }
-        
-        .news-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-        
-        .news-icon.summer {
-            background: linear-gradient(135deg, #FFE135 0%, #FF6B35 100%);
-            color: white;
-        }
-        
-        .news-icon.announcement {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-        }
-        
-        /* Carousel Bereich */
-        .carousel-item {
-            height: 80vh;
-            min-height: 400px;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .carousel-caption {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        /* Tarife Bereich */
-         .pricing-section {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .pricing-card {
-            border: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .pricing-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 20px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-        
-        .pricing-popular .pricing-header {
-            background-color: var(--secondary-color);
-            position: relative;
-        }
-        
-        .popular-badge {
-            position: absolute;
-            top: -8px;
-            right: 15px;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: #8B4513;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
-            border: 2px solid white;
-        }
-        
-        .pricing-price {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-        
-        /* Über uns Bereich */
-        .about-section {
-            padding: 80px 0;
-            background: var(--pastel-mint);
-        }
-        
-        .about-image {
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Kontakt Bereich */
-        .contact-section {
-            padding: 80px 0;
-            background: var(--pastel-peach);
-        }
-        
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* Footer */
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 40px 0 20px;
-        }
-        
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer-social a {
-            display: inline-block;
-            margin-right: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .section-heading {
-            position: relative;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-        }
-        
-        .section-heading:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-        
-        .text-center .section-heading:after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <div data-bs-theme="dark">
@@ -287,64 +49,105 @@
 
     <!-- Carousel Bereich -->
     <section id="home">
-        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="desktop-carousel">
+            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/pexels-anastasiya-gepp-654466-1462630.jpg" class="d-block w-100">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h1 class="display-4 fw-bold">Dein Weg zu besseren Noten!</h1>
+                                        <p class="lead">Unser Nachhilfekurs bietet dir erfahrene Lehrkräfte, effektive Lernmethoden und schnelle Lernerfolge. Starte jetzt</p>
+                                        <a href="#pricing" class="btn btn-secondary btn-lg mt-3">Unsere Angebote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/student-studying.jpg" class="d-block w-100 " alt="">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h1 class="display-4 fw-bold">Jetzt anmelden!</h1>
+                                        <p class="lead">Unten finden Sie den aktuellen Status unserer Nachhilfekurse – sichern Sie sich rechtzeitig einen Platz und starten Sie durch – die Plätze sind begrenzt!</p>
+                                        <a href="#about" class="btn btn-primary btn-lg mt-3">Mehr erfahren</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pexels-tima-miroshnichenko-5428262.jpg" class="d-block w-100 img-cover" alt="">
+                        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h1 class="display-4 fw-bold">Online & Vor Ort</h1>
+                                        <p class="lead">Flexible Lernmöglichkeiten für maximalen Komfort und optimale Ergebnisse</p>
+                                        <a href="#contact" class="btn btn-secondary btn-lg mt-3">Jetzt anfragen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Zurück</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Weiter</span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/pexels-anastasiya-gepp-654466-1462630.jpg" class="d-block w-100">
-                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h1 class="display-4 fw-bold">Dein Weg zu besseren Noten!</h1>
-                                    <p class="lead">Unser Nachhilfekurs bietet dir erfahrene Lehrkräfte, effektive Lernmethoden und schnelle Lernerfolge. Starte jetzt</p>
-                                    <a href="#pricing" class="btn btn-secondary btn-lg mt-3">Unsere Angebote</a>
-                                </div>
+        </div>
+        <div class="mobile-hero">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h1 class="fw-bold mb-3">Dein Weg zu besseren Noten!</h1>
+                    <p class="lead mb-4">Professionelle Nachhilfe in Wien - Jetzt durchstarten!</p>
+                </div>
+                
+                <div class="mobile-hero-card">
+                    <div class="row g-4 text-center">
+                        <div class="col-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-mortarboard-fill"></i>
                             </div>
+                            <h6 class="fw-bold">Qualifizierte Lehrkräfte</h6>
+                        </div>
+                        <div class="col-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h6 class="fw-bold">Bessere Noten</h6>
+                        </div>
+                        <div class="col-4">
+                            <div class="feature-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h6 class="fw-bold">Kleine Gruppen</h6>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/student-studying.jpg" class="d-block w-100 " alt="">
-                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h1 class="display-4 fw-bold">Jetzt anmelden!</h1>
-                                    <p class="lead">Unten finden Sie den aktuellen Status unserer Nachhilfekurse – sichern Sie sich rechtzeitig einen Platz und starten Sie durch – die Plätze sind begrenzt!</p>
-                                    <a href="#about" class="btn btn-primary btn-lg mt-3">Mehr erfahren</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/pexels-tima-miroshnichenko-5428262.jpg" class="d-block w-100 img-cover" alt="">
-                    <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h1 class="display-4 fw-bold">Online & Vor Ort</h1>
-                                    <p class="lead">Flexible Lernmöglichkeiten für maximalen Komfort und optimale Ergebnisse</p>
-                                    <a href="#contact" class="btn btn-secondary btn-lg mt-3">Jetzt anfragen</a>
-                                </div>
-                            </div>
+                    
+                    <div class="text-center mt-4">
+                        <p class="mb-4">Erfahrene Lehrkräfte, effektive Lernmethoden und schnelle Lernerfolge - sowohl online als auch vor Ort.</p>
+                        <div class="d-grid gap-2">
+                            <a href="#pricing" class="btn btn-secondary btn-lg">Unsere Angebote</a>
+                            <a href="#contact" class="btn btn-outline-primary">Jetzt anfragen</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Zurück</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Weiter</span>
-            </button>
         </div>
     </section>
     <section class="news-section" id="news-section">
@@ -510,7 +313,7 @@
         </div>
     </section>
 
-    <!-- Kontakt Bereich -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row text-center mb-5">
@@ -522,24 +325,35 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-form">
-                        <form>
+                        <form action="https://formsubmit.co/office@lernplus.at" method="POST" id="contactForm">
+                            <!-- FormSubmit Honeypot -->
+                            <input type="text" name="_honey" style="display:none">
+                            <!-- Disable Captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Success Page -->
+                            <input type="hidden" name="_next" value="https://www.lernplus.at/thanks.html">
+                            <!-- Email Template -->
+                            <input type="hidden" name="_template" value="table">
+                            <!-- Email Subject -->
+                            <input type="hidden" name="_subject" value="Neue Nachricht von der Website">
+
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Ihr Name" required>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Ihr Name" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="email" class="form-label">E-Mail</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail-Adresse" required>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Ihre E-Mail-Adresse" required>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="subject" class="form-label">Betreff</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Betreff Ihrer Nachricht">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Betreff Ihrer Nachricht">
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Nachricht</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Ihre Nachricht an uns" required></textarea>
+                                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Ihre Nachricht an uns" required></textarea>
                             </div>
                             <div class="form-check mb-3">
                                 <input class="form-check-input" type="checkbox" id="datenschutz" required>
@@ -642,6 +456,41 @@
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
                 }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función para pre-llenar el formulario desde los botones de pricing
+            function preFillForm(plan, price) {
+                const message = `Ich interessiere mich für den ${plan}-Tarif (${price}€).
+Bitte kontaktieren Sie mich für weitere Informationen.`;
+                
+                const subject = `Anfrage: ${plan}-Tarif`;
+                
+                // Scroll to contact form
+                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+                
+                // Pre-fill the form
+                document.querySelector('#subject').value = subject;
+                document.querySelector('#message').value = message;
+            }
+
+            // Event listeners para los botones de pricing
+            document.querySelectorAll('.pricing-card .btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const card = this.closest('.pricing-card');
+                    const plan = card.querySelector('h4').textContent;
+                    const price = card.querySelector('.pricing-price').textContent.split('€')[0].trim();
+                    preFillForm(plan, price);
+                });
+            });
+
+            // Opcional: Mostrar loading al enviar el formulario
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                const submitButton = this.querySelector('button[type="submit"]');
+                submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+                submitButton.disabled = true;
             });
         });
     </script>
